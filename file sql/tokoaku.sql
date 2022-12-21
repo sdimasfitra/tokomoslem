@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Jan 25, 2022 at 01:11 PM
--- Server version: 10.4.20-MariaDB
--- PHP Version: 7.4.22
+-- Host: 127.0.0.1
+-- Generation Time: Dec 21, 2022 at 03:07 PM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db_toko_laravel`
+-- Database: `tokoaku`
 --
 
 -- --------------------------------------------------------
@@ -62,7 +62,8 @@ INSERT INTO `kategori` (`id`, `nama_kategori`, `created_at`, `updated_at`, `dele
 (4, 'Hijab Instan', '2021-12-13 02:13:16', '2021-12-13 02:13:41', '2021-12-13 02:13:41'),
 (5, 'Pakaian Pria', '2021-12-13 02:13:25', NULL, NULL),
 (6, 'Pakaian Wanita', '2021-12-13 02:13:30', NULL, NULL),
-(7, 'Aksesoris', '2021-12-13 02:14:00', NULL, NULL);
+(7, 'Aksesoris', '2021-12-13 02:14:00', NULL, NULL),
+(8, 'ELEKTRONIK', '2022-12-21 05:22:09', '2022-12-21 05:22:20', '2022-12-21 05:22:20');
 
 -- --------------------------------------------------------
 
@@ -139,14 +140,15 @@ CREATE TABLE `produk` (
 --
 
 INSERT INTO `produk` (`id`, `id_kategori`, `gambar`, `nama_produk`, `deskripsi`, `harga_jual`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 1, 'produk_1643112196.jpg', 'HIJAB VOAL SEGI EMPAT', 'Sempurnakan tampilan harianmu dengan hijab segiempat', 98000, '2021-12-13 02:45:21', '2022-01-25 05:03:16', NULL),
-(2, 5, 'produk_1643112182.jpg', 'Koko Kurta Agno Big Size', 'Koko Kurta Agno Koko simpel, elegan dan special berbahan katun Toyobo', 200000, '2021-12-13 04:37:41', '2022-01-25 05:03:02', NULL),
-(3, 5, 'produk_1643112164.jpg', 'Jersey/Sportwear Oslo Long', 'Jersey/Sportwear Oslo Long', 275000, '2021-12-13 04:41:58', '2022-01-25 05:02:44', NULL),
-(4, 6, 'produk_1643112151.jpg', 'New Kaleena Tunic Blue for HIJUP', 'Koleksi terbaru', 346500, '2021-12-13 04:43:04', '2022-01-25 05:02:31', NULL),
-(5, 7, 'produk_1643112137.jpg', 'OWIEN WHITE', 'Material : Premium Synthetic Leather K+ Accesories', 314000, '2021-12-13 04:45:03', '2022-01-25 05:02:17', NULL),
-(6, 7, 'produk_1643112115.jpg', 'Kalung Etnik Tenun Batu', 'Ukuran Lingkaran kalung 75 cm', 198000, '2021-12-13 04:46:26', '2022-01-25 05:01:55', NULL),
-(7, 1, 'produk_1643112104.jpg', 'HIJAB VOAL SEGI EMPAT', 'Sempurnakan tampilan harianmu dengan hijab segiempat printed berbahan voal yang adem anti gerah, tegak didahi.', 116100, '2021-12-13 04:47:30', '2022-01-25 05:01:44', NULL),
-(8, 5, 'produk_1643112055.jpg', 'Koko Long Sleeves Black Red', 'Koko Long Sleeves Black Red dari Fatih Indonesia.', 399000, '2021-12-13 04:48:39', '2022-01-25 05:01:17', NULL);
+(1, 1, 'produk_1643112196.jpg', 'HIJAB VOAL SEGI EMPAT', 'Sempurnakan tampilan harianmu dengan hijab segiempat', 98000, '2021-12-13 02:45:21', '2022-12-20 09:53:29', '2022-12-20 09:53:29'),
+(2, 5, 'produk_1643112182.jpg', 'Koko Kurta Agno Big Size', 'Koko Kurta Agno Koko simpel, elegan dan special berbahan katun Toyobo', 200000, '2021-12-13 04:37:41', '2022-12-20 09:53:25', '2022-12-20 09:53:25'),
+(3, 5, 'produk_1643112164.jpg', 'Jersey/Sportwear Oslo Long', 'Jersey/Sportwear Oslo Long', 275000, '2021-12-13 04:41:58', '2022-12-20 09:53:22', '2022-12-20 09:53:22'),
+(4, 6, 'produk_1643112151.jpg', 'New Kaleena Tunic Blue for HIJUP', 'Koleksi terbaru', 346500, '2021-12-13 04:43:04', '2022-12-20 09:53:11', '2022-12-20 09:53:11'),
+(5, 7, 'produk_1643112137.jpg', 'OWIEN WHITE', 'Material : Premium Synthetic Leather K+ Accesories', 314000, '2021-12-13 04:45:03', '2022-12-20 09:53:10', '2022-12-20 09:53:10'),
+(6, 7, 'produk_1643112115.jpg', 'Kalung Etnik Tenun Batu', 'Ukuran Lingkaran kalung 75 cm', 198000, '2021-12-13 04:46:26', '2022-12-20 09:53:05', '2022-12-20 09:53:05'),
+(7, 1, 'produk_1643112104.jpg', 'HIJAB VOAL SEGI EMPAT', 'Sempurnakan tampilan harianmu dengan hijab segiempat printed berbahan voal yang adem anti gerah, tegak didahi.', 116100, '2021-12-13 04:47:30', '2022-12-20 09:53:02', '2022-12-20 09:53:02'),
+(8, 5, 'produk_1643112055.jpg', 'Koko Long Sleeves Black Red', 'Koko Long Sleeves Black Red dari Fatih Indonesia.', 399000, '2021-12-13 04:48:39', '2022-12-20 09:52:51', '2022-12-20 09:52:51'),
+(9, 5, 'produk_1671557860.jpg', 'Rabbani - Kemeja Koko Lengan Panjang Sarang Syafid Hitam RMO', 'Kemko Sarimbit Syafid Lengan Panjang\r\nKemko Sarimbit Syafid dengan konsep asimetris, memainkan cutting padupadan dalam pemilihan warna yg dibuat kontras dan aksen bordir geometris didalamnya, serta model lengan manset tetap tampil lebih elegant', 209250, '2022-12-20 10:35:57', '2022-12-20 10:37:40', NULL);
 
 -- --------------------------------------------------------
 
@@ -172,7 +174,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `phone`, `address`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Fauzan Falah', 'admin@gmail.com', '6281298669897', 'Ujung Harapan Kav. Daruttaqwa 05/14 Kec. Babelan, Kab. Bekasi', NULL, '$2y$10$H83CeR9WQih4Bm.VNCbFt.3pPNI6QrQzxBD6SNtSdKaFpBvfyVqKe', NULL, '2021-12-13 00:13:32', '2022-01-25 04:52:49');
+(1, 'DIMAS FITRA SETIAWAN', 'sdimasfitra@gmail.com', '0823 9806 2617', 'Jalan Imam Bonjol, Lrg. Resmi, Desa Air Paoh, Kota Baturaja, Sumatera Selatan, Indonesia', NULL, '$2y$10$1GRMLrY1ycHVEC8U52z.8.K71c7UGk5s0uKaEr1COOiwQPcVJS7l2', NULL, '2021-12-13 00:13:32', '2022-12-20 09:51:34');
 
 --
 -- Indexes for dumped tables
@@ -238,7 +240,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -256,7 +258,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `users`
